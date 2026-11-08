@@ -1,0 +1,56 @@
+{
+  "name": "clear-ui",
+  "version": "0.1.0",
+  "description": "DSH 插件：输入框上方一个「清爽」开关，一键把会话里的日志行切到内置「精简」工作详情，再点切回原样。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "compact",
+    "logs",
+    "transcript"
+  ],
+  "license": "MIT",
+  "author": "HoaXQ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoaXQuill/clear-ui.git"
+  },
+  "homepage": "https://github.com/HoaXQuill/clear-ui#readme",
+  "bugs": {
+    "url": "https://github.com/HoaXQuill/clear-ui/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/client-smoke.cjs",
+    "sync": "node scripts/sync.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# clear-ui 的加载补丁：往插件树里插一个条目。
+- insert:
+    - id: clear-ui
+      name: clear-ui
