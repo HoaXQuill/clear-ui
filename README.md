@@ -13,6 +13,17 @@ DSH 插件。在输入框上方加一个「清爽」开关：一键把会话正�
 
 ## 安装
 
+仓库：<https://github.com/HoaXQuill/clear-ui>（MIT）。
+
+任选一种来源，路径指向本包 `package.json` 所在目录：
+
+```
+git clone https://github.com/HoaXQuill/clear-ui.git
+dsh plugin add file:<clone 出来的目录> --profile desktop
+```
+
+或用本地已有副本：
+
 ```
 dsh plugin add file:C:/Users/HoaXQ/Desktop/插件/clear-ui --profile desktop
 ```
